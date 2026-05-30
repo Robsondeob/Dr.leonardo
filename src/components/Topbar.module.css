@@ -1,0 +1,211 @@
+/* ===== Topbar.module.css ===== */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 32px;
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(14, 165, 233, 0.08);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
+}
+
+/* ---------- Left: greeting + date ---------- */
+.greeting {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex-shrink: 0;
+}
+
+.greetingText {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #e2e8f0;
+  white-space: nowrap;
+}
+
+.greetingDate {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: #94a3b8;
+  white-space: nowrap;
+}
+
+/* ---------- Center: search ---------- */
+.searchWrapper {
+  position: relative;
+  flex: 1;
+  max-width: 420px;
+  min-width: 180px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 15px;
+  color: #64748b;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 10px 16px 10px 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(14, 165, 233, 0.1);
+  background: rgba(15, 23, 42, 0.6);
+  color: #e2e8f0;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.searchInput::placeholder {
+  color: #64748b;
+}
+
+.searchInput:focus {
+  border-color: rgba(14, 165, 233, 0.35);
+  background: rgba(15, 23, 42, 0.8);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.08);
+}
+
+/* ---------- Right: actions ---------- */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+/* Notification bell */
+.notificationBtn {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(14, 165, 233, 0.1);
+  background: rgba(15, 23, 42, 0.5);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #94a3b8;
+  transition: all 0.25s ease;
+  padding: 0;
+}
+
+.notificationBtn:hover {
+  background: rgba(14, 165, 233, 0.08);
+  color: #e2e8f0;
+  border-color: rgba(14, 165, 233, 0.2);
+}
+
+.badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ef4444;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.45);
+  line-height: 1;
+}
+
+/* Novo Agendamento button */
+.newAppointmentBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(14, 165, 233, 0.3);
+}
+
+.newAppointmentBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
+}
+
+.newAppointmentBtn:active {
+  transform: translateY(0);
+}
+
+.plusIcon {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .topbar {
+    padding: 14px 16px 14px 64px;
+    gap: 12px;
+  }
+
+  .greeting {
+    width: 100%;
+  }
+
+  .searchWrapper {
+    order: 10;
+    max-width: 100%;
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  .actions {
+    margin-left: auto;
+  }
+
+  .newAppointmentBtn span {
+    display: none;
+  }
+
+  .newAppointmentBtn {
+    padding: 10px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .greetingText {
+    font-size: 14px;
+  }
+
+  .newAppointmentBtn {
+    padding: 10px 12px;
+    gap: 0;
+  }
+}

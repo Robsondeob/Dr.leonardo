@@ -1,0 +1,204 @@
+/* ===================================
+   FinancialSummary — Resumo Financeiro
+   =================================== */
+
+.card {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(14, 165, 233, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.headerIcon {
+  font-size: 22px;
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #e2e8f0;
+  letter-spacing: -0.01em;
+}
+
+/* --- Mini stat boxes grid --- */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.miniStat {
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(14, 165, 233, 0.08);
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.miniStatLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+}
+
+.miniStatValue {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.green {
+  color: #34d399;
+}
+
+.yellow {
+  color: #fbbf24;
+}
+
+.red {
+  color: #f87171;
+}
+
+.cyan {
+  color: #0ea5e9;
+}
+
+/* --- Entries list --- */
+.entriesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.entriesDivider {
+  height: 1px;
+  background: rgba(14, 165, 233, 0.08);
+  margin-bottom: 14px;
+}
+
+.entriesTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+
+.entryRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.entryRow:hover {
+  background: rgba(14, 165, 233, 0.04);
+}
+
+.entryDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dotIncome {
+  background: #34d399;
+}
+
+.dotExpense {
+  background: #f87171;
+}
+
+.dotPending {
+  background: #fbbf24;
+}
+
+.entryLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #e2e8f0;
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.entryValue {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.valueIncome {
+  color: #34d399;
+}
+
+.valueExpense {
+  color: #f87171;
+}
+
+.valuePending {
+  color: #fbbf24;
+}
+
+.emptyEntries {
+  text-align: center;
+  padding: 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* --- Footer --- */
+.footer {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(14, 165, 233, 0.08);
+  text-align: center;
+}
+
+.footerLink {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #38bdf8;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: color 0.2s ease;
+}
+
+.footerLink:hover {
+  color: #0ea5e9;
+  text-decoration: underline;
+}

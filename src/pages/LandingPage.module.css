@@ -1,0 +1,356 @@
+.landingContainer {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #0F172A;
+  color: #E2E8F0;
+  display: flex;
+  flex-direction: column;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid rgba(14, 165, 233, 0.1);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logoImage {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+.navLink {
+  color: #94A3B8;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+  font-size: 0.9rem;
+}
+
+.navLink:hover {
+  color: #0EA5E9;
+}
+
+/* Common Section */
+.section {
+  padding: 6rem 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sectionTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #E2E8F0;
+}
+
+.sectionTitle span {
+  color: #0EA5E9;
+}
+
+/* Hero Section */
+.hero {
+  padding: 8rem 5% 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 400px;
+  background: radial-gradient(ellipse at top, rgba(14, 165, 233, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.heroName {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(to right, #E2E8F0, #38BDF8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: #94A3B8;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.heroSlogan {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #0EA5E9;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.heroSpecialties {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.specialtyBadge {
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #38BDF8;
+}
+
+.heroActions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.primaryBtn {
+  background: linear-gradient(135deg, #0EA5E9, #0284c7);
+  color: #ffffff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 14px rgba(14, 165, 233, 0.4);
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.6);
+}
+
+.secondaryBtn {
+  background: rgba(30, 41, 59, 0.8);
+  color: #E2E8F0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.secondaryBtn:hover {
+  background: rgba(30, 41, 59, 1);
+  border-color: rgba(14, 165, 233, 0.4);
+  color: #0EA5E9;
+}
+
+/* Benefits Section */
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.benefitCard {
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(14, 165, 233, 0.1);
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.benefitCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(14, 165, 233, 0.4);
+  background: rgba(30, 41, 59, 0.7);
+}
+
+.benefitIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.benefitTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #E2E8F0;
+}
+
+/* Triage Form */
+.formSection {
+  background: linear-gradient(180deg, transparent, rgba(30, 41, 59, 0.5), transparent);
+}
+
+.formContainer {
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  padding: 3rem;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #94A3B8;
+}
+
+.formInput {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  color: #E2E8F0;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.formInput:focus {
+  border-color: #0EA5E9;
+  outline: none;
+}
+
+.formSelect {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  color: #E2E8F0;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  appearance: none;
+}
+
+.formSelect:focus {
+  border-color: #0EA5E9;
+  outline: none;
+}
+
+.formSelect option {
+  background: #1E293B;
+  color: #E2E8F0;
+}
+
+.submitBtn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.successMessage {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #34D399;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Institutional Section */
+.institutional {
+  max-width: 800px;
+  text-align: center;
+}
+
+.instAvatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0EA5E9, #38BDF8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0 auto 2rem;
+  box-shadow: 0 0 30px rgba(14, 165, 233, 0.3);
+}
+
+.instText {
+  font-size: 1.1rem;
+  color: #94A3B8;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+/* Final CTA */
+.ctaSection {
+  text-align: center;
+  padding: 6rem 5% 8rem;
+}
+
+.ctaTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: #E2E8F0;
+}
+
+/* Footer */
+.footer {
+  padding: 2rem;
+  text-align: center;
+  color: #64748B;
+  border-top: 1px solid rgba(14, 165, 233, 0.1);
+  font-size: 0.875rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heroName {
+    font-size: 2.5rem;
+  }
+  
+  .heroSlogan {
+    font-size: 1.25rem;
+  }
+  
+  .formContainer {
+    padding: 2rem;
+  }
+}

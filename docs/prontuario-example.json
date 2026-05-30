@@ -1,0 +1,105 @@
+{
+  "medicalRecordId": "a1b2c3d4-e5f6-4a5b-8c9d-0123456789ab",
+  "clinicId": "f9e8d7c6-b5a4-4c3b-2a1d-9876543210fe",
+  "status": "active",
+  "createdAt": "2026-04-10T14:30:00Z",
+  "updatedAt": "2026-05-28T09:15:00Z",
+  
+  "patientIdentity": {
+    "patientId": "11223344-5566-7788-9900-aabbccddeeff",
+    "fullName": "L*** M*** da S***",
+    "age": 34,
+    "gender": "F",
+    "contact": {
+      "phone": "(31) 9****-**10",
+      "email": "l***@email.com"
+    }
+  },
+
+  "clinicalProfile": {
+    "bloodType": "O+",
+    "allergies": [
+      "Penicilina"
+    ],
+    "currentMedications": [
+      "Levotiroxina Sódica 50mcg"
+    ],
+    "systemicDiseases": [
+      "Hipotireoidismo controlado"
+    ],
+    "_metadata": {
+      "security": "IMPORTANT: Health data above (allergies, medications, diseases) must be ENCRYPTED at the application level before being saved to the database. NEVER log these fields in plain text."
+    }
+  },
+
+  "odontogram": [
+    {
+      "toothNumber": 16,
+      "surface": "occlusal",
+      "condition": "caries",
+      "status": "to_do",
+      "notes": "Cárie oclusal rasa"
+    },
+    {
+      "toothNumber": 21,
+      "surface": "vestibular",
+      "condition": "restoration_resin",
+      "status": "done",
+      "notes": "Restauração estética pré-existente em bom estado"
+    },
+    {
+      "toothNumber": 48,
+      "surface": "all",
+      "condition": "missing",
+      "status": "done",
+      "notes": "Terceiro molar extraído"
+    }
+  ],
+
+  "clinicalNotes": [
+    {
+      "noteId": "n1-2026-05-28",
+      "professionalId": "doc-leo-123",
+      "professionalName": "Dr. Leonardo César",
+      "date": "2026-05-28T09:15:00Z",
+      "content": "Paciente retornou para avaliação do preparo para coroa total no dente 46. Relatou leve sensibilidade térmica que cessou após 2 dias. Realizada moldagem de transferência e registro de mordida. Coroa provisória re-cimentada. Próxima sessão: Prova do coping.",
+      "_metadata": {
+        "security": "IMPORTANT: 'content' field contains highly sensitive evolutionary data and MUST be encrypted in the database."
+      }
+    },
+    {
+      "noteId": "n2-2026-05-14",
+      "professionalId": "doc-leo-123",
+      "professionalName": "Dr. Leonardo César",
+      "date": "2026-05-14T10:00:00Z",
+      "content": "Realizado preparo para coroa total no elemento 46. Moldagem prévia com alginato. Preparo subgengival, confecção e cimentação de coroa provisória em resina acrílica. Prescrito analgésico SOS.",
+      "_metadata": {
+        "security": "IMPORTANT: 'content' field MUST be encrypted."
+      }
+    }
+  ],
+
+  "treatmentPlans": [
+    {
+      "planId": "tp-001",
+      "title": "Reabilitação Estética Posterior",
+      "status": "approved",
+      "approvalDate": "2026-05-10T11:00:00Z",
+      "items": [
+        {
+          "toothNumber": 46,
+          "procedure": "Coroa Total em Zircônia",
+          "value": 1850.00,
+          "status": "in-progress"
+        },
+        {
+          "toothNumber": 16,
+          "procedure": "Restauração em Resina (Classe I)",
+          "value": 250.00,
+          "status": "pending"
+        }
+      ],
+      "totalValue": 2100.00
+    }
+  ]
+}
